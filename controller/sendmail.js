@@ -2,11 +2,11 @@ const nodemailer = require("nodemailer");
 
 // Send email function
 async function sendEmail(email, subject, link) {
-  
+
   var transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.userMail,
+      user: process.env.EMAIL,
       pass: process.env.secret,
     },
   });
